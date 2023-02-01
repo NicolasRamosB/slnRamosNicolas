@@ -14,21 +14,23 @@
         @Html.ActionLink("Inicio","Index","Home" ) 
         @Html.ActionLink("Recetas","Index","Receta")
     </nav>
+    
     <main>
-        <aside id="Menu">
-            @if (IsSectionDefined("SideBar"))
-            {
-                @RenderSection("SideBar")
-            }
-            else
-            {
-                     <h2>Sitio web MVC</h2>
-            }
-        </aside>
+        
         <section id="Content">
             @RenderBody()
         </section>
     </main>
+    <aside id="Menu">
+        @if (IsSectionDefined("SideBar"))
+        {
+            @RenderSection("SideBar")
+        }
+        else
+        {
+         <h2>Sitio web MVC</h2>
+        }
+        </aside>
     <footer id="Footer">
         misrecetas@web.com
     </footer>
