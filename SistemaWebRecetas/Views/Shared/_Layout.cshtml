@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/css/site.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header id="Top">
+        <h1>Mis Recetas</h1> 
+    </header>
+   <nav class="nav bg-success">
+        @Html.ActionLink("Inicio","Index","Home" ) 
+        @Html.ActionLink("Recetas","Index","Receta")
+    </nav>
+    <main>
+        <aside id="Menu">
+            @if (IsSectionDefined("SideBar"))
+            {
+                @RenderSection("SideBar")
+            }
+            else
+            {
+                 <h2>Error al cargar el Side</h2>
+            }
+        </aside>
+        <section id="Content">
+            @RenderBody()
+        </section>
+    </main>
+    <footer id="Footer">
+        misrecetas@web.com
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SistemaWebRecetas.Models.Receta>
+
+@{
+    ViewData["Title"] = "Recetas";
+}
+
+@section SideBar{
+    <div>
+        @Html.ActionLink("Crear una Receta", "Create","Receta")
+        @Html.ActionLink("Volver al inicio", "Index", "Home")
+
+    </div>
+}
+
+<div>
+
+    
+        <h1>Recetas</h1>
+      @foreach (var item in Model)
+    {
+        <div>
+            <h1>
+                @Html.ActionLink(item.Titulo, "Details", "Receta", new{id = item.Id})
+            </h1> 
+             <p>
+               Categoria: @Html.DisplayFor(receta => item.Categoria)
+            </p> 
+                <p>
+               Ingreditens: @Html.DisplayFor(receta => item.Ingredientes)
+                    </p> 
+                <p>
+               Instrucciones: @Html.DisplayFor(receta => item.Instrucciones)
+                </p> 
+
+                <p>
+                  Autor:  @Html.ActionLink(item.Autor, "IndexByAutor", "Receta", new{autor = item.Autor})
+                    </p> 
+                        <p>
+                          Apellido:  @Html.ActionLink(item.Apellido, "IndexByApellido", "Receta", new{apellido = item.Apellido})
+                    </p> 
+                        <p>
+              Edad:  @Html.DisplayFor(receta => item.Edad)
+                    </p> 
+                        <p>
+               Email: @Html.DisplayFor(receta => item.Email)
+                    </p> 
+
+
+        </div>
+        
+    }
+       
+</div>
