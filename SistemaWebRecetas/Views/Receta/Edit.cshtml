@@ -6,11 +6,13 @@
     ViewData["Title"] = "Edicion de Receta";
 }
 @section SideBar{
-        
+
+        <div>
         @Html.ActionLink("Crear una Receta", "Create","Receta")
         @Html.ActionLink("Volver al inicio", "Index", "Home")
+        @Html.ActionLink("Volver a recetas", "Index", "Receta")
 
-       
+        </div>
 }
 
 

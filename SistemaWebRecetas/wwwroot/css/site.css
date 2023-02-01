@@ -49,3 +49,11 @@ footer {
     border: 1px solid black;
     grid-area: f;
 }
+
+.conteiner-items{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-wrap:wrap;
+}

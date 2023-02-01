@@ -5,17 +5,17 @@
 }
 
 @section SideBar{
-   
+    <div class="other-views" >
         @Html.ActionLink("Crear una Receta", "Create","Receta")
         @Html.ActionLink("Volver al inicio", "Index", "Home")
         
-    
+    </div>
 }
 
-<div>
+        <h1>Recetas</h1>
+<div class="conteiner-items">
 
     
-        <h1>Recetas</h1>
       @foreach (var item in Model)
     {
         <div>
