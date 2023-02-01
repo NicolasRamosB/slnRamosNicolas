@@ -8,7 +8,7 @@
     <div>
         @Html.ActionLink("Crear una Receta", "Create","Receta")
         @Html.ActionLink("Volver al inicio", "Index", "Home")
-
+        
     </div>
 }
 
@@ -44,10 +44,10 @@
                         <p>
                Email: @Html.DisplayFor(receta => item.Email)
                     </p> 
-
-
+            @Html.ActionLink("Eliminar", "Delete", "Receta", new{id = item.Id} )
+            @Html.ActionLink("Editar", "Edit", "Receta", new{id = item.Id} )
         </div>
-        
+       
     }
        
 </div>
