@@ -11,7 +11,7 @@ namespace SistemaWebRecetas.Validations
         public override bool IsValid(object value)
         {
             string categoria = (string)value;
-            if (categoria.ToUpper() == "")
+            if (categoria.ToUpper() == "Desayuno")
             {
                 return true;
             }
